@@ -4,7 +4,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 import Progress from '../components/Progress';
-import EmployeeTable from './EmployeeTable';
+import EmployeeTable from '../components/EmployeeTable';
 import * as selectors from '../selectors';
 import * as actions from '../store/actions';
 import * as API from '../API';

@@ -3,9 +3,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import Table from '@material-ui/core/Table';
 import Paper from '@material-ui/core/Paper';
 
-import EmployeeTableHeader from '../components/EmployeeTableHeader';
-import EmployeeTableBody from '../components/EmployeeTableBody';
-import EmployeeTableFooter from '../components/EmployeeTableFooter';
+import EmployeeTableHeader from './EmployeeTableHeader';
+import EmployeeTableBody from './EmployeeTableBody';
+import EmployeeTableFooter from './EmployeeTableFooter';
 import { EmployeeWithId } from '../store/types';
 
 interface EmployeeTableProps {
@@ -41,30 +41,28 @@ const EmployeeTable: React.FC<EmployeeTableProps> = (props) => {
 	};
 
 	return (
-		<div>
-			<TableContainer component={Paper}>
-				<Table>
-					<EmployeeTableHeader
-						selectedRowsLength={selectedRows.length}
-						employeeListLength={employeeListLength}
-						onSelectAllRows={selectAllRowsHandler}
-					/>
-					<EmployeeTableBody
-						employeeList={employeeListPerPage}
-						selectedRows={selectedRows}
-						onSelectRow={selectRowHandler}
-					/>
-					<EmployeeTableFooter
-						page={page}
-						rowsPerPage={rowsPerPage}
-						employeeListLength={employeeListLength}
-						nameList={nameList}
-						onChangePage={handleChangePage}
-						onChangeRowsPerPage={handleChangeRowsPerPage}
-					/>
-				</Table>
-			</TableContainer>
-		</div>
+		<TableContainer component={Paper}>
+			<Table>
+				<EmployeeTableHeader
+					selectedRowsLength={selectedRows.length}
+					employeeListLength={employeeListLength}
+					onSelectAllRows={selectAllRowsHandler}
+				/>
+				<EmployeeTableBody
+					employeeList={employeeListPerPage}
+					selectedRows={selectedRows}
+					onSelectRow={selectRowHandler}
+				/>
+				<EmployeeTableFooter
+					page={page}
+					rowsPerPage={rowsPerPage}
+					employeeListLength={employeeListLength}
+					nameList={nameList}
+					onChangePage={handleChangePage}
+					onChangeRowsPerPage={handleChangeRowsPerPage}
+				/>
+			</Table>
+		</TableContainer>
 	);
 };
 
