@@ -19,7 +19,7 @@ export type PromisedResponse<T> = Promise<T | FetchError>
 export type Response<T> = T | FetchError;
 
 export const getEmployeeList = (): PromisedResponse<GetEmployeeListResponse> => {
-	return fetch('https://randomuser.me/api/?results=100&inc=dob,name,gender,email,phone')
+	return fetch('https://randomuser.me/api/?results=100&inc=dob,name,gender,email,phone&nat=us,dk,fr,gb')
 		.then(res => res.json())
 		.catch((error: Error) => ({ error }));
 };
