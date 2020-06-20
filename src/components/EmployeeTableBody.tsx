@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { fade } from '@material-ui/core/styles';
+import { makeStyles, fade } from '@material-ui/core/styles';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
